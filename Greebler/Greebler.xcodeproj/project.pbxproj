@@ -424,6 +424,7 @@
 				0B86258A1B77F1C70070F73A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0B86258B1B77F1C70070F73A /* Build configuration list for PBXNativeTarget "GreeblerTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +433,7 @@
 				0B86258D1B77F1C70070F73A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
