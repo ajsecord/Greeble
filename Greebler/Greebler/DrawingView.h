@@ -1,5 +1,5 @@
 //
-//  DetailViewController.h
+//  DrawingView.h
 //  Greebler
 //
 //  Created by Adrian on 8/9/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController
+@interface DrawingView : UIView
+@property(strong) UIColor *fillColor;
 @end
-

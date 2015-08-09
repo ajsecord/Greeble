@@ -10,7 +10,10 @@
 #import "DetailViewController.h"
 
 @interface MasterViewController ()
+@property(nonatomic) IBOutlet UISlider *numRectsSlider;
 @property(nonatomic) IBOutlet UILabel *numRectsLabel;
+
+@property(nonatomic) NSMutableDictionary *sliderLabelMap;
 @end
 
 @implementation MasterViewController
@@ -24,7 +27,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    self.detailViewController =
+        (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    [self update];
 }
 
 #pragma mark - Segues
@@ -35,9 +40,20 @@
 #pragma mark - Interface events
 
 - (IBAction)sliderDidUpdate:(id)sender {
-    NSAssert(sender && self.numRectsLabel, @"");
-    UISlider *slider = sender;
-    self.numRectsLabel.text = [NSString stringWithFormat:@"%i", (int)slider.value];
+    if (sender == _numRectsSlider) {
+        [self updateLabel:_numRectsLabel forSlider:_numRectsSlider];
+    }
+}
+
+#pragma mark - Private
+
+- (void)update {
+    [self updateLabel:_numRectsLabel forSlider:_numRectsSlider];
+}
+
+- (void)updateLabel:(UILabel *)label forSlider:(UISlider *)slider {
+    NSAssert(slider && label, @"");
+    label.text = [NSString stringWithFormat:@"%i", (int)slider.value];
 }
 
 @end
