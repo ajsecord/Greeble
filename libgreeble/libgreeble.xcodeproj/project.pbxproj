@@ -6,10 +6,73 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		0B20C9D71B799E23003ABFEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B20C9CF1B799E23003ABFEF /* LinAlg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0B08DA0E0DE8A59A005290ED;
+			remoteInfo = generate;
+		};
+		0B20C9D91B799E23003ABFEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B20C9CF1B799E23003ABFEF /* LinAlg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC046055464E500DB518D;
+			remoteInfo = LinAlg;
+		};
+		0B20C9DB1B799E23003ABFEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B20C9CF1B799E23003ABFEF /* LinAlg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0B666ADC0B6AD2F300E7DCBA;
+			remoteInfo = run_tests;
+		};
+		0B20C9DD1B799E23003ABFEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B20C9CF1B799E23003ABFEF /* LinAlg.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0BD3ADDD0B70E18000919B1B;
+			remoteInfo = example;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B20C9CF1B799E23003ABFEF /* LinAlg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LinAlg.xcodeproj; path = ext/LinAlg/ide/XCode6/LinAlg.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
+		0B20C9CE1B799E0B003ABFEF /* External */ = {
+			isa = PBXGroup;
+			children = (
+				0B20C9CF1B799E23003ABFEF /* LinAlg.xcodeproj */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		0B20C9D01B799E23003ABFEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B20C9D81B799E23003ABFEF /* generate_headers */,
+				0B20C9DA1B799E23003ABFEF /* libLinAlg.a */,
+				0B20C9DC1B799E23003ABFEF /* run_tests */,
+				0B20C9DE1B799E23003ABFEF /* example */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0B20C9DF1B799E5B003ABFEF /* Public Headers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Public Headers";
+			sourceTree = "<group>";
+		};
 		0B8625521B77F19C0070F73A = {
 			isa = PBXGroup;
 			children = (
+				0B20C9DF1B799E5B003ABFEF /* Public Headers */,
+				0B20C9CE1B799E0B003ABFEF /* External */,
 			);
 			sourceTree = "<group>";
 		};
@@ -30,11 +93,48 @@
 			);
 			mainGroup = 0B8625521B77F19C0070F73A;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 0B20C9D01B799E23003ABFEF /* Products */;
+					ProjectRef = 0B20C9CF1B799E23003ABFEF /* LinAlg.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		0B20C9D81B799E23003ABFEF /* generate_headers */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = generate_headers;
+			remoteRef = 0B20C9D71B799E23003ABFEF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0B20C9DA1B799E23003ABFEF /* libLinAlg.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLinAlg.a;
+			remoteRef = 0B20C9D91B799E23003ABFEF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0B20C9DC1B799E23003ABFEF /* run_tests */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = run_tests;
+			remoteRef = 0B20C9DB1B799E23003ABFEF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0B20C9DE1B799E23003ABFEF /* example */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = example;
+			remoteRef = 0B20C9DD1B799E23003ABFEF /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin XCBuildConfiguration section */
 		0B8625571B77F19C0070F73A /* Debug */ = {
