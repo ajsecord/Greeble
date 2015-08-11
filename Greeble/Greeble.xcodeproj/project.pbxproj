@@ -84,7 +84,7 @@
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = 0B8625561B77F19C0070F73A /* Build configuration list for PBXProject "libgreeble" */;
+			buildConfigurationList = 0B8625561B77F19C0070F73A /* Build configuration list for PBXProject "Greeble" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -152,7 +152,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0B8625561B77F19C0070F73A /* Build configuration list for PBXProject "libgreeble" */ = {
+		0B8625561B77F19C0070F73A /* Build configuration list for PBXProject "Greeble" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B8625571B77F19C0070F73A /* Debug */,

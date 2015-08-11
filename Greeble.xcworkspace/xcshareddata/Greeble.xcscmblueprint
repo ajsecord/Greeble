@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "05A6B5D11107901505DD3D1F7B012BA6BE9F8CE8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "05A6B5D11107901505DD3D1F7B012BA6BE9F8CE8" : 0,
+    "054F65B9119507F067AF03FB2D46F4D0290127B4" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3A310C34-B0CC-4C6D-B60F-C0174E3132FC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "05A6B5D11107901505DD3D1F7B012BA6BE9F8CE8" : "Greeble",
+    "054F65B9119507F067AF03FB2D46F4D0290127B4" : "Greeble\/libgreeble\/ext\/LinAlg"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Greeble",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Greeble.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ajsecord\/LinAlg.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "054F65B9119507F067AF03FB2D46F4D0290127B4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ajsecord\/Greeble.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "05A6B5D11107901505DD3D1F7B012BA6BE9F8CE8"
+    }
+  ]
+}

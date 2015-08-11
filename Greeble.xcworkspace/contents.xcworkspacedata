@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:libgreeble/libgreeble.xcodeproj">
+      location = "group:/Users/ajsecord/Source/Greeble/Greeble/Greeble.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Greebler/Greebler.xcodeproj">
