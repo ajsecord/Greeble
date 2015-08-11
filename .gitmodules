@@ -1,0 +1,3 @@
+[submodule "libgreeble/ext/LinAlg"]
+	path = libgreeble/ext/LinAlg
+	url = git@github.com:ajsecord/LinAlg.git
