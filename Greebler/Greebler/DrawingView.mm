@@ -8,6 +8,9 @@
 
 #import "DrawingView.h"
 
+#include <Greeble/Rect.h>
+#include <iostream>
+
 @implementation DrawingView
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -22,6 +25,10 @@
 
 - (id)initCommon {
     _fillColor = [UIColor blackColor];
+
+    Greeble::Rect r;
+    std::cout << r << std::endl;
+
     return self;
 }
 
