@@ -77,6 +77,8 @@
 
 /* Begin PBXFileReference section */
 		0B20C9CF1B799E23003ABFEF /* LinAlg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LinAlg.xcodeproj; path = LinAlg/ide/XCode6/LinAlg.xcodeproj; sourceTree = "<group>"; };
+		0B5BCF3A1B7C9916006F5703 /* RectDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RectDataSource.h; sourceTree = "<group>"; };
+		0B5BCF3B1B7CA13A006F5703 /* Types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
 		0BB63ED01B79A24C006F95A6 /* Rect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
 		0BB63ED11B79A376006F95A6 /* Rect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Rect.cpp; sourceTree = "<group>"; };
 		0BB63ED61B79A427006F95A6 /* libGreeble.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGreeble.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				0BB63ED01B79A24C006F95A6 /* Rect.h */,
+				0B5BCF3A1B7C9916006F5703 /* RectDataSource.h */,
+				0B5BCF3B1B7CA13A006F5703 /* Types.h */,
 			);
 			name = "Public Headers";
 			path = Greeble;

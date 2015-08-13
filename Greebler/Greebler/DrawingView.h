@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#include <Greeble/RectDataSource.h>
+
+#include <memory>
+
 @interface DrawingView : UIView
 @property(strong) UIColor *fillColor;
+@property(assign) std::weak_ptr<Greeble::RectDataSource> dataSource;
 @end

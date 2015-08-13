@@ -4,9 +4,9 @@
 
 namespace Greeble {
 
-Rect::Rect(): origin(LinAlg::Vec2f::zero()), size(LinAlg::Vec2f::zero()), orientation(0) {}
+Rect::Rect(): origin(Vec::zero()), size(Vec::zero()), orientation(0) {}
 
-Rect::Rect(const LinAlg::Vec2f origin, const LinAlg::Vec2f size, const float orientation):
+Rect::Rect(const Vec origin, const Vec size, const float orientation):
     origin(origin), size(size), orientation(orientation) {}
 
 Rect& Rect::operator=(const Rect& other) {
@@ -16,6 +16,9 @@ Rect& Rect::operator=(const Rect& other) {
     return *this;
 }
 
+Vec Rect::center() const {
+    return this->origin + this->size * Scalar(0.5);
+}
 
 std::ostream& operator<<(std::ostream& o, const Rect& r) {
     return o << r.origin << '(' << r.size(0) << 'x' << r.size(1) << ") " << r.orientation;

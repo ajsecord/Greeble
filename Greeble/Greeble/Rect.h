@@ -1,7 +1,8 @@
 #ifndef GREEBLE_RECT_H
 #define GREEBLE_RECT_H
 
-#include <LinAlg/Vec2.h>
+
+#include <Greeble/Types.h>
 
 #include <iosfwd>
 
@@ -9,13 +10,15 @@ namespace Greeble {
 
 class Rect {
 public:
-    LinAlg::Vec2f origin;
-    LinAlg::Vec2f size;
-    float orientation;
+    Vec origin;
+    Vec size;
+    Scalar orientation;
 
     Rect();
-    Rect(const LinAlg::Vec2f origin, const LinAlg::Vec2f size, const float orientation);
+    Rect(const Vec origin, const Vec size, const Scalar orientation);
     Rect& operator=(const Rect& other);
+
+    Vec center() const;
 };
 
 std::ostream& operator<<(std::ostream& o, const Rect& r);
