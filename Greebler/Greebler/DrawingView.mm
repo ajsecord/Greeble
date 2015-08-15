@@ -34,13 +34,15 @@ static inline CGRect GreebleRectToCGRect(const Greeble::Rect& rect) {
 }
 
 - (void)drawRect:(CGRect)rect {
+    if (!_dataSource) {
+        return;
+    }
+
     CGContextRef context = UIGraphicsGetCurrentContext();
 
-    auto rects = self.dataSource.lock();
-
-    const size_t numRects = rects->getNumRects();
-    for (size_t i = 0; i < numRects; ++i) {
-        Greeble::Rect rect = rects->getRect(i);
+    const int numRects = [_dataSource numRects];
+    for (int i = 0; i < numRects; ++i) {
+        Greeble::Rect rect = [_dataSource rectAtIndex:i];
 
         CGContextSaveGState(context);
         {
@@ -58,24 +60,6 @@ static inline CGRect GreebleRectToCGRect(const Greeble::Rect& rect) {
         }
         CGContextRestoreGState(context);
     }
-
-    CGRect r = CGRectMake(100, 100, 100, 140);
-    CGFloat radians = 30 / 180.0 * M_PI;
-
-    CGContextSaveGState(context);
-    {
-        CGPoint center = CGPointMake(CGRectGetMidX(r), CGRectGetMidY(r));
-
-        // Translate to the origin, rotate, translate back. Specified in reverse order.
-        CGContextTranslateCTM(context, center.x, center.y);
-        CGContextRotateCTM(context, radians);
-        CGContextTranslateCTM(context, -center.x, -center.y);
-
-        CGContextSetFillColorWithColor(context, _fillColor.CGColor);
-        CGContextFillRect(context, r);
-
-    }
-    CGContextRestoreGState(context);
 }
 
 @end
