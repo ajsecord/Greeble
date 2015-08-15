@@ -49,6 +49,7 @@
 		0B8625831B77F1C70070F73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B8625841B77F1C70070F73A /* GreeblerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GreeblerTests.m; sourceTree = "<group>"; };
 		0BF253F71B7F4B520003A3BB /* RectDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RectDataSource.h; sourceTree = "<group>"; };
+		0BF253F81B7F56BD0003A3BB /* GeometryConversions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeometryConversions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +114,7 @@
 				0B86256D1B77F1C60070F73A /* MasterViewController.m */,
 				0BF253F71B7F4B520003A3BB /* RectDataSource.h */,
 				0B8625651B77F1C60070F73A /* Supporting Files */,
+				0BF253F81B7F56BD0003A3BB /* GeometryConversions.h */,
 			);
 			path = Greebler;
 			sourceTree = "<group>";

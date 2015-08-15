@@ -8,13 +8,10 @@
 
 #import "DrawingView.h"
 
+#import "GeometryConversions.h"
+
 #include <Greeble/Rect.h>
 #include <iostream>
-
-// Ignores orientation.
-static inline CGRect GreebleRectToCGRect(const Greeble::Rect& rect) {
-    return CGRectMake(rect.origin(0), rect.origin(1), rect.size(0), rect.size(1));
-}
 
 @implementation DrawingView
 
@@ -46,7 +43,7 @@ static inline CGRect GreebleRectToCGRect(const Greeble::Rect& rect) {
 
         CGContextSaveGState(context);
         {
-            CGRect r = GreebleRectToCGRect(rect);
+            CGRect r = GreebleRectToCGRectNoOrientation(rect);
             CGPoint center = CGPointMake(CGRectGetMidX(r), CGRectGetMidY(r));
 
             // Translate to the origin, rotate, translate back. Specified in reverse order.

@@ -9,9 +9,26 @@
 #import "DetailViewController.h"
 
 #import "DrawingView.h"
+#import "GeometryConversions.h"
 
 #include <iterator>
 #include <vector>
+
+static const CGSize kMaxSize = { 50, 50 };
+
+static inline CGFloat randScalar(CGFloat min, CGFloat max) {
+    return min + (arc4random() / (CGFloat)UINT32_MAX) * (max - min);
+}
+
+static inline Greeble::Rect randRect(CGRect bounds, CGSize maxSize) {
+    CGSize size = CGSizeMake(randScalar(0, maxSize.width), randScalar(0, maxSize.height));
+    CGFloat widest = hypotf(size.width / 2, size.height / 2);
+    CGPoint origin = CGPointMake(randScalar(CGRectGetMinX(bounds) + widest, CGRectGetMaxX(bounds) - widest),
+                                 randScalar(CGRectGetMinY(bounds) + widest, CGRectGetMaxY(bounds) - widest));
+    CGFloat orientation = randScalar(0, M_PI * 2);
+    
+    return Greeble::Rect(CGPointToGreebleVec(origin), CGSizeToGreebleVec(size), orientation);
+}
 
 @interface RangeRectDataSource : NSObject<RectDataSource>
 - (id)initWithRects:(const std::vector<Greeble::Rect>&)rects;
@@ -31,9 +48,30 @@
 
 - (void)viewDidLoad {
     _rects = std::vector<Greeble::Rect>(1);
-    _rects[0] = Greeble::Rect(Greeble::Vec(100,100), Greeble::Vec(40,20), 30 * M_PI / 180);
+    _rects[0] = randRect(self.view.bounds, kMaxSize);
     RangeRectDataSource *dataSource = [[RangeRectDataSource alloc] initWithRects:_rects];
     self.drawingView.dataSource = dataSource;
+}
+
+- (void)viewDidLayoutSubviews {
+}
+
+- (IBAction)numRectsSliderChanged:(id)sender {
+    int numRects = (int)[(UISlider *)sender value];
+    if (numRects == _rects.size())
+        return;
+
+    if (numRects > _rects.size()) {
+        int curSize = _rects.size();
+        _rects.resize(numRects);
+        for (int i = curSize; i < numRects; ++i) {
+            _rects[i] = randRect(self.view.bounds, kMaxSize);
+        }
+    } else if (numRects < _rects.size()) {
+        _rects.resize(numRects);
+    }
+
+    [self.view setNeedsDisplay];
 }
 
 @end
