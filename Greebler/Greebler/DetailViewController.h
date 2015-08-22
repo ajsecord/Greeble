@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DetailViewController : UIViewController
+@property(nonatomic, assign) NSInteger numRects;
 @end
 

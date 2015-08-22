@@ -8,9 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-#import "RectDataSource.h"
-
 #include <memory>
+
+#import <Greeble/Rect.h>
+
+@class DrawingView;
+
+@protocol RectDataSource <NSObject>
+@required
+- (int)numRectsForDrawingView:(DrawingView *)drawingView;
+- (Greeble::Rect)rectForDrawingView:(DrawingView *)drawingView atIndex:(int)index;
+@end
 
 @interface DrawingView : UIView
 @property(nonatomic) UIColor *fillColor;

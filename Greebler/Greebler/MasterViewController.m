@@ -42,6 +42,7 @@
 - (IBAction)sliderDidUpdate:(id)sender {
     if (sender == _numRectsSlider) {
         [self updateLabel:_numRectsLabel forSlider:_numRectsSlider];
+        self.detailViewController.numRects = ((UISlider *)sender).value;
     }
 }
 

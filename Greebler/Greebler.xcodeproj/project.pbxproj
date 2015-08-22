@@ -48,7 +48,6 @@
 		0B86257E1B77F1C70070F73A /* GreeblerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreeblerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B8625831B77F1C70070F73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B8625841B77F1C70070F73A /* GreeblerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GreeblerTests.m; sourceTree = "<group>"; };
-		0BF253F71B7F4B520003A3BB /* RectDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RectDataSource.h; sourceTree = "<group>"; };
 		0BF253F81B7F56BD0003A3BB /* GeometryConversions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeometryConversions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,14 +106,13 @@
 				0B8625701B77F1C60070F73A /* DetailViewController.mm */,
 				0B659BE81B78025800127E6A /* DrawingView.h */,
 				0B659BE91B78025800127E6A /* DrawingView.mm */,
+				0BF253F81B7F56BD0003A3BB /* GeometryConversions.h */,
 				0B8625751B77F1C60070F73A /* Images.xcassets */,
 				0B8625771B77F1C60070F73A /* LaunchScreen.xib */,
 				0B8625721B77F1C60070F73A /* Main.storyboard */,
 				0B86256C1B77F1C60070F73A /* MasterViewController.h */,
 				0B86256D1B77F1C60070F73A /* MasterViewController.m */,
-				0BF253F71B7F4B520003A3BB /* RectDataSource.h */,
 				0B8625651B77F1C60070F73A /* Supporting Files */,
-				0BF253F81B7F56BD0003A3BB /* GeometryConversions.h */,
 			);
 			path = Greebler;
 			sourceTree = "<group>";

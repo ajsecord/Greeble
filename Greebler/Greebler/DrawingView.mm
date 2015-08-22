@@ -37,9 +37,9 @@
 
     CGContextRef context = UIGraphicsGetCurrentContext();
 
-    const int numRects = [_dataSource numRects];
+    const int numRects = [_dataSource numRectsForDrawingView:self];
     for (int i = 0; i < numRects; ++i) {
-        Greeble::Rect rect = [_dataSource rectAtIndex:i];
+        Greeble::Rect rect = [_dataSource rectForDrawingView:self atIndex:i];
 
         CGContextSaveGState(context);
         {

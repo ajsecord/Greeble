@@ -46,19 +46,12 @@ static inline Greeble::Rect randRect(CGRect bounds, CGSize maxSize) {
     return [self isViewLoaded] ? (DrawingView *)self.view : nil;
 }
 
-- (void)viewDidLoad {
-    _rects = std::vector<Greeble::Rect>(1);
-    _rects[0] = randRect(self.view.bounds, kMaxSize);
-    RangeRectDataSource *dataSource = [[RangeRectDataSource alloc] initWithRects:_rects];
-    self.drawingView.dataSource = dataSource;
+- (NSInteger)numRects {
+    return (NSInteger)_rects.size();
 }
 
-- (void)viewDidLayoutSubviews {
-}
-
-- (IBAction)numRectsSliderChanged:(id)sender {
-    int numRects = (int)[(UISlider *)sender value];
-    if (numRects == _rects.size())
+- (void)setNumRects:(NSInteger)numRects {
+    if (_rects.size() == numRects)
         return;
 
     if (numRects > _rects.size()) {
@@ -74,28 +67,39 @@ static inline Greeble::Rect randRect(CGRect bounds, CGSize maxSize) {
     [self.view setNeedsDisplay];
 }
 
+- (void)viewDidLoad {
+    _rects = std::vector<Greeble::Rect>(1);
+    _rects[0] = randRect(self.view.bounds, kMaxSize);
+    RangeRectDataSource *dataSource = [[RangeRectDataSource alloc] initWithRects:_rects];
+    self.drawingView.dataSource = dataSource;
+}
+
+- (void)viewDidLayoutSubviews {
+}
+
 @end
 
 @implementation RangeRectDataSource {
-    std::vector<Greeble::Rect> _rects;
+    const std::vector<Greeble::Rect>* _rects;
 }
 
 - (id)initWithRects:(const std::vector<Greeble::Rect>&)rects {
     self = [super init];
     if (self) {
-        _rects = rects;
+        _rects = &rects;
     }
     return self;
 }
 
 #pragma mark - RectDataSource
 
-- (int)numRects {
-    return _rects.size();
+- (int)numRectsForDrawingView:(DrawingView *)drawingView {
+    return _rects ? _rects->size() : 0;
 }
 
-- (Greeble::Rect)rectAtIndex:(int)index {
-    return _rects[index];
+- (Greeble::Rect)rectForDrawingView:(DrawingView *)drawingView atIndex:(int)index {
+    NSAssert(_rects, @"");
+    return _rects ? (*_rects)[index] : Greeble::Rect();
 }
 
 @end
