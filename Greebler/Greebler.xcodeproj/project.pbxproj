@@ -122,16 +122,8 @@
 				0B8625751B77F1C60070F73A /* Images.xcassets */,
 				0B8625771B77F1C60070F73A /* LaunchScreen.xib */,
 				0B8625721B77F1C60070F73A /* Main.storyboard */,
-				0B87BBF71BC1820300858AD7 /* SettingsTableViewController.h */,
-				0B87BBF81BC1820300858AD7 /* SettingsTableViewController.m */,
-				0B87BBF91BC1820300858AD7 /* SettingsTableViewController.xib */,
-				0B87BBF21BC17E5E00858AD7 /* SliderTableViewCell.h */,
-				0B87BBF31BC17E5E00858AD7 /* SliderTableViewCell.m */,
-				0B87BBF41BC17E5E00858AD7 /* SliderTableViewCell.xib */,
+				0B87BC011BC18E9300858AD7 /* Settings */,
 				0B8625651B77F1C60070F73A /* Supporting Files */,
-				0B87BBFC1BC189EE00858AD7 /* SwitchTableViewCell.h */,
-				0B87BBFD1BC189EE00858AD7 /* SwitchTableViewCell.m */,
-				0B87BBFE1BC189EE00858AD7 /* SwitchTableViewCell.xib */,
 			);
 			path = Greebler;
 			sourceTree = "<group>";
@@ -160,6 +152,22 @@
 				0B8625831B77F1C70070F73A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0B87BC011BC18E9300858AD7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				0B87BBF71BC1820300858AD7 /* SettingsTableViewController.h */,
+				0B87BBF81BC1820300858AD7 /* SettingsTableViewController.m */,
+				0B87BBF91BC1820300858AD7 /* SettingsTableViewController.xib */,
+				0B87BBF21BC17E5E00858AD7 /* SliderTableViewCell.h */,
+				0B87BBF31BC17E5E00858AD7 /* SliderTableViewCell.m */,
+				0B87BBF41BC17E5E00858AD7 /* SliderTableViewCell.xib */,
+				0B87BBFC1BC189EE00858AD7 /* SwitchTableViewCell.h */,
+				0B87BBFD1BC189EE00858AD7 /* SwitchTableViewCell.m */,
+				0B87BBFE1BC189EE00858AD7 /* SwitchTableViewCell.xib */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

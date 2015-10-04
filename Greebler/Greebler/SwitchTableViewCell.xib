@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,16 +15,25 @@
                 <rect key="frame" x="0.0" y="0.0" width="373" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H5j-2A-McK">
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H5j-2A-McK">
                         <rect key="frame" x="316" y="6" width="51" height="31"/>
                     </switch>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXX-7h-SD2">
-                        <rect key="frame" x="16" y="11" width="34" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXX-7h-SD2">
+                        <rect key="frame" x="8" y="11" width="100" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="FNp-YN-NgV"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="SXX-7h-SD2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="19l-Ea-Xe1"/>
+                    <constraint firstAttribute="leadingMargin" secondItem="SXX-7h-SD2" secondAttribute="leading" id="6fi-VZ-gO7"/>
+                    <constraint firstItem="H5j-2A-McK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8ux-mw-cCB"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="H5j-2A-McK" secondAttribute="trailing" id="nbv-LM-4eH"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="titleLabel" destination="SXX-7h-SD2" id="D5i-HS-9DI"/>
