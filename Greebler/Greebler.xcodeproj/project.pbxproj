@@ -16,6 +16,8 @@
 		0B8625761B77F1C60070F73A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B8625751B77F1C60070F73A /* Images.xcassets */; };
 		0B8625791B77F1C60070F73A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B8625771B77F1C60070F73A /* LaunchScreen.xib */; };
 		0B8625851B77F1C70070F73A /* GreeblerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8625841B77F1C70070F73A /* GreeblerTests.m */; };
+		0B87BBF51BC17E5E00858AD7 /* SliderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87BBF31BC17E5E00858AD7 /* SliderTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		0B87BBF61BC17E5E00858AD7 /* SliderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B87BBF41BC17E5E00858AD7 /* SliderTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,9 @@
 		0B86257E1B77F1C70070F73A /* GreeblerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GreeblerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B8625831B77F1C70070F73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B8625841B77F1C70070F73A /* GreeblerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GreeblerTests.m; sourceTree = "<group>"; };
+		0B87BBF21BC17E5E00858AD7 /* SliderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderTableViewCell.h; sourceTree = "<group>"; };
+		0B87BBF31BC17E5E00858AD7 /* SliderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderTableViewCell.m; sourceTree = "<group>"; };
+		0B87BBF41BC17E5E00858AD7 /* SliderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderTableViewCell.xib; sourceTree = "<group>"; };
 		0BF253F81B7F56BD0003A3BB /* GeometryConversions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeometryConversions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +113,9 @@
 				0B8625771B77F1C60070F73A /* LaunchScreen.xib */,
 				0B8625721B77F1C60070F73A /* Main.storyboard */,
 				0B8625651B77F1C60070F73A /* Supporting Files */,
+				0B87BBF21BC17E5E00858AD7 /* SliderTableViewCell.h */,
+				0B87BBF31BC17E5E00858AD7 /* SliderTableViewCell.m */,
+				0B87BBF41BC17E5E00858AD7 /* SliderTableViewCell.xib */,
 			);
 			path = Greebler;
 			sourceTree = "<group>";
@@ -182,7 +190,7 @@
 		0B86255A1B77F1C60070F73A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Adrian Secord";
 				TargetAttributes = {
 					0B8625611B77F1C60070F73A = {
@@ -220,6 +228,7 @@
 			files = (
 				0B8625741B77F1C60070F73A /* Main.storyboard in Resources */,
 				0B8625791B77F1C60070F73A /* LaunchScreen.xib in Resources */,
+				0B87BBF61BC17E5E00858AD7 /* SliderTableViewCell.xib in Resources */,
 				0B8625761B77F1C60070F73A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +251,7 @@
 				0B8625681B77F1C60070F73A /* main.m in Sources */,
 				0B659BEA1B78025800127E6A /* DrawingView.mm in Sources */,
 				0B8625711B77F1C60070F73A /* DrawingViewController.mm in Sources */,
+				0B87BBF51BC17E5E00858AD7 /* SliderTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +315,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -393,6 +404,7 @@
 					"$(inherited)",
 					"/Users/ajsecord/Source/Greeble/Greeble/build/Debug-iphoneos",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adriansecord.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -407,6 +419,7 @@
 					"$(inherited)",
 					"/Users/ajsecord/Source/Greeble/Greeble/build/Debug-iphoneos",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adriansecord.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -425,6 +438,7 @@
 				);
 				INFOPLIST_FILE = GreeblerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adriansecord.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Greebler.app/Greebler";
 			};
@@ -440,6 +454,7 @@
 				);
 				INFOPLIST_FILE = GreeblerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.adriansecord.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Greebler.app/Greebler";
 			};
