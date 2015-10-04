@@ -10,6 +10,7 @@
 
 #import "DrawingView.h"
 #import "GeometryConversions.h"
+#import "SettingsTableViewController.h"
 
 #include <iterator>
 #include <vector>
@@ -78,7 +79,10 @@ static inline Greeble::Rect randRect(CGRect bounds, CGSize maxSize) {
 }
 
 - (IBAction)settingsButtonWasTapped:(id)sender {
-    NSLog(@"Tapped");
+    SettingsTableViewController *settings = [[SettingsTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    settings.modalPresentationStyle = UIModalPresentationPopover;
+    [self presentViewController:settings animated:YES completion:nil];
+    settings.popoverPresentationController.barButtonItem = sender;
 }
 
 @end
