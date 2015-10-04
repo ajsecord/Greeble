@@ -1,5 +1,5 @@
 //
-//  DetailViewController.h
+//  DrawingViewController.h
 //  Greebler
 //
 //  Created by Adrian on 8/9/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController
+@interface DrawingViewController : UIViewController
 @property(nonatomic, assign) NSInteger numRects;
 @end
 

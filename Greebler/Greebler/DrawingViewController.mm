@@ -1,12 +1,12 @@
 //
-//  DetailViewController.m
+//  DrawingViewController.m
 //  Greebler
 //
 //  Created by Adrian on 8/9/15.
 //  Copyright (c) 2015 Adrian Secord. All rights reserved.
 //
 
-#import "DetailViewController.h"
+#import "DrawingViewController.h"
 
 #import "DrawingView.h"
 #import "GeometryConversions.h"
@@ -34,13 +34,13 @@ static inline Greeble::Rect randRect(CGRect bounds, CGSize maxSize) {
 - (id)initWithRects:(const std::vector<Greeble::Rect>&)rects;
 @end
 
-@interface DetailViewController () {
+@interface DrawingViewController () {
     std::vector<Greeble::Rect> _rects;
 }
 @property(readonly) DrawingView *drawingView;
 @end
 
-@implementation DetailViewController
+@implementation DrawingViewController
 
 - (DrawingView *)drawingView {
     return [self isViewLoaded] ? (DrawingView *)self.view : nil;

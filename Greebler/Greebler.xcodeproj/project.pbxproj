@@ -11,8 +11,7 @@
 		0B659BEA1B78025800127E6A /* DrawingView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0B659BE91B78025800127E6A /* DrawingView.mm */; };
 		0B8625681B77F1C60070F73A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8625671B77F1C60070F73A /* main.m */; };
 		0B86256B1B77F1C60070F73A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B86256A1B77F1C60070F73A /* AppDelegate.m */; };
-		0B86256E1B77F1C60070F73A /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B86256D1B77F1C60070F73A /* MasterViewController.m */; };
-		0B8625711B77F1C60070F73A /* DetailViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0B8625701B77F1C60070F73A /* DetailViewController.mm */; };
+		0B8625711B77F1C60070F73A /* DrawingViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0B8625701B77F1C60070F73A /* DrawingViewController.mm */; };
 		0B8625741B77F1C60070F73A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B8625721B77F1C60070F73A /* Main.storyboard */; };
 		0B8625761B77F1C60070F73A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B8625751B77F1C60070F73A /* Images.xcassets */; };
 		0B8625791B77F1C60070F73A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B8625771B77F1C60070F73A /* LaunchScreen.xib */; };
@@ -38,10 +37,8 @@
 		0B8625671B77F1C60070F73A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0B8625691B77F1C60070F73A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0B86256A1B77F1C60070F73A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0B86256C1B77F1C60070F73A /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		0B86256D1B77F1C60070F73A /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		0B86256F1B77F1C60070F73A /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		0B8625701B77F1C60070F73A /* DetailViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DetailViewController.mm; sourceTree = "<group>"; };
+		0B86256F1B77F1C60070F73A /* DrawingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawingViewController.h; sourceTree = "<group>"; };
+		0B8625701B77F1C60070F73A /* DrawingViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DrawingViewController.mm; sourceTree = "<group>"; };
 		0B8625731B77F1C60070F73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B8625751B77F1C60070F73A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0B8625781B77F1C60070F73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -102,16 +99,14 @@
 			children = (
 				0B8625691B77F1C60070F73A /* AppDelegate.h */,
 				0B86256A1B77F1C60070F73A /* AppDelegate.m */,
-				0B86256F1B77F1C60070F73A /* DetailViewController.h */,
-				0B8625701B77F1C60070F73A /* DetailViewController.mm */,
 				0B659BE81B78025800127E6A /* DrawingView.h */,
 				0B659BE91B78025800127E6A /* DrawingView.mm */,
+				0B86256F1B77F1C60070F73A /* DrawingViewController.h */,
+				0B8625701B77F1C60070F73A /* DrawingViewController.mm */,
 				0BF253F81B7F56BD0003A3BB /* GeometryConversions.h */,
 				0B8625751B77F1C60070F73A /* Images.xcassets */,
 				0B8625771B77F1C60070F73A /* LaunchScreen.xib */,
 				0B8625721B77F1C60070F73A /* Main.storyboard */,
-				0B86256C1B77F1C60070F73A /* MasterViewController.h */,
-				0B86256D1B77F1C60070F73A /* MasterViewController.m */,
 				0B8625651B77F1C60070F73A /* Supporting Files */,
 			);
 			path = Greebler;
@@ -244,10 +239,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B86256B1B77F1C60070F73A /* AppDelegate.m in Sources */,
-				0B86256E1B77F1C60070F73A /* MasterViewController.m in Sources */,
 				0B8625681B77F1C60070F73A /* main.m in Sources */,
 				0B659BEA1B78025800127E6A /* DrawingView.mm in Sources */,
-				0B8625711B77F1C60070F73A /* DetailViewController.mm in Sources */,
+				0B8625711B77F1C60070F73A /* DrawingViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
