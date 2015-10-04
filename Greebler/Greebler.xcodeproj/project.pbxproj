@@ -18,6 +18,8 @@
 		0B8625851B77F1C70070F73A /* GreeblerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8625841B77F1C70070F73A /* GreeblerTests.m */; };
 		0B87BBF51BC17E5E00858AD7 /* SliderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87BBF31BC17E5E00858AD7 /* SliderTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		0B87BBF61BC17E5E00858AD7 /* SliderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B87BBF41BC17E5E00858AD7 /* SliderTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		0B87BBFA1BC1820300858AD7 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87BBF81BC1820300858AD7 /* SettingsTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		0B87BBFB1BC1820300858AD7 /* SettingsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B87BBF91BC1820300858AD7 /* SettingsTableViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,9 @@
 		0B87BBF21BC17E5E00858AD7 /* SliderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderTableViewCell.h; sourceTree = "<group>"; };
 		0B87BBF31BC17E5E00858AD7 /* SliderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderTableViewCell.m; sourceTree = "<group>"; };
 		0B87BBF41BC17E5E00858AD7 /* SliderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderTableViewCell.xib; sourceTree = "<group>"; };
+		0B87BBF71BC1820300858AD7 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		0B87BBF81BC1820300858AD7 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
+		0B87BBF91BC1820300858AD7 /* SettingsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsTableViewController.xib; sourceTree = "<group>"; };
 		0BF253F81B7F56BD0003A3BB /* GeometryConversions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeometryConversions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -112,10 +117,13 @@
 				0B8625751B77F1C60070F73A /* Images.xcassets */,
 				0B8625771B77F1C60070F73A /* LaunchScreen.xib */,
 				0B8625721B77F1C60070F73A /* Main.storyboard */,
-				0B8625651B77F1C60070F73A /* Supporting Files */,
+				0B87BBF71BC1820300858AD7 /* SettingsTableViewController.h */,
+				0B87BBF81BC1820300858AD7 /* SettingsTableViewController.m */,
+				0B87BBF91BC1820300858AD7 /* SettingsTableViewController.xib */,
 				0B87BBF21BC17E5E00858AD7 /* SliderTableViewCell.h */,
 				0B87BBF31BC17E5E00858AD7 /* SliderTableViewCell.m */,
 				0B87BBF41BC17E5E00858AD7 /* SliderTableViewCell.xib */,
+				0B8625651B77F1C60070F73A /* Supporting Files */,
 			);
 			path = Greebler;
 			sourceTree = "<group>";
@@ -230,6 +238,7 @@
 				0B8625791B77F1C60070F73A /* LaunchScreen.xib in Resources */,
 				0B87BBF61BC17E5E00858AD7 /* SliderTableViewCell.xib in Resources */,
 				0B8625761B77F1C60070F73A /* Images.xcassets in Resources */,
+				0B87BBFB1BC1820300858AD7 /* SettingsTableViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B87BBFA1BC1820300858AD7 /* SettingsTableViewController.m in Sources */,
 				0B86256B1B77F1C60070F73A /* AppDelegate.m in Sources */,
 				0B8625681B77F1C60070F73A /* main.m in Sources */,
 				0B659BEA1B78025800127E6A /* DrawingView.mm in Sources */,
