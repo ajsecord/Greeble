@@ -8,6 +8,22 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsTableViewController : UITableViewController
+@interface SliderSetting : NSObject
+@property(nonatomic, copy) NSString *title;
+@property(nonatomic, assign) float minValue;
+@property(nonatomic, assign) float maxValue;
+@property(nonatomic, assign) float value;
 
+- (id)initWithTitle:(NSString *)title minValue:(float)minValue maxValue:(float)maxValue value:(float)value;
+@end
+
+@interface SwitchSetting : NSObject
+@property(nonatomic, copy) NSString *title;
+@property(nonatomic, assign) BOOL value;
+
+- (id)initWithTitle:(NSString *)title value:(BOOL)value;
+@end
+
+@interface SettingsTableViewController : UITableViewController
+@property(nonatomic, strong) NSArray *settings;  // An array of *Setting objects.
 @end

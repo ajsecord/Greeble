@@ -37,6 +37,7 @@ static inline Greeble::Rect randRect(CGRect bounds, CGSize maxSize) {
 
 @interface DrawingViewController () {
     std::vector<Greeble::Rect> _rects;
+    NSArray *_settings;
 }
 @property(readonly) DrawingView *drawingView;
 @end
@@ -73,6 +74,10 @@ static inline Greeble::Rect randRect(CGRect bounds, CGSize maxSize) {
     _rects[0] = randRect(self.view.bounds, kMaxSize);
     RangeRectDataSource *dataSource = [[RangeRectDataSource alloc] initWithRects:_rects];
     self.drawingView.dataSource = dataSource;
+
+    _settings = @[[[SliderSetting alloc] initWithTitle:@"Num Rects" minValue:0 maxValue:1000 value:42],
+                  [[SwitchSetting alloc] initWithTitle:@"Grumble" value:YES]
+                  ];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -80,6 +85,7 @@ static inline Greeble::Rect randRect(CGRect bounds, CGSize maxSize) {
 
 - (IBAction)settingsButtonWasTapped:(id)sender {
     SettingsTableViewController *settings = [[SettingsTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    settings.settings = _settings;
     settings.modalPresentationStyle = UIModalPresentationPopover;
     [self presentViewController:settings animated:YES completion:nil];
     settings.popoverPresentationController.barButtonItem = sender;

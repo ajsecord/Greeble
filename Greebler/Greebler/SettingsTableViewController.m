@@ -24,13 +24,39 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return [self.settings count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSAssert(indexPath.row < [self.settings count], @"");
+
     UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Test"];
-    cell.textLabel.text = [NSString stringWithFormat:@"Row %i", (int)indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@",[self.settings[indexPath.row] title]];
     return cell;
 }
 
+@end
+
+@implementation SliderSetting
+- (id)initWithTitle:(NSString *)title minValue:(float)minValue maxValue:(float)maxValue value:(float)value {
+    self = [super init];
+    if (self) {
+        _title = [title copy];
+        _minValue = minValue;
+        _maxValue = maxValue;
+        _value = value;
+    }
+    return self;
+}
+@end
+
+@implementation SwitchSetting
+- (id)initWithTitle:(NSString *)title value:(BOOL)value {
+    self = [super init];
+    if (self) {
+        _title = [title copy];
+        _value = value;
+    }
+    return self;
+}
 @end
