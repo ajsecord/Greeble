@@ -20,6 +20,8 @@
 		0B87BBF61BC17E5E00858AD7 /* SliderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B87BBF41BC17E5E00858AD7 /* SliderTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		0B87BBFA1BC1820300858AD7 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87BBF81BC1820300858AD7 /* SettingsTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		0B87BBFB1BC1820300858AD7 /* SettingsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B87BBF91BC1820300858AD7 /* SettingsTableViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		0B87BBFF1BC189EE00858AD7 /* SwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87BBFD1BC189EE00858AD7 /* SwitchTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		0B87BC001BC189EE00858AD7 /* SwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B87BBFE1BC189EE00858AD7 /* SwitchTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,9 @@
 		0B87BBF71BC1820300858AD7 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
 		0B87BBF81BC1820300858AD7 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
 		0B87BBF91BC1820300858AD7 /* SettingsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsTableViewController.xib; sourceTree = "<group>"; };
+		0B87BBFC1BC189EE00858AD7 /* SwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchTableViewCell.h; sourceTree = "<group>"; };
+		0B87BBFD1BC189EE00858AD7 /* SwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchTableViewCell.m; sourceTree = "<group>"; };
+		0B87BBFE1BC189EE00858AD7 /* SwitchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwitchTableViewCell.xib; sourceTree = "<group>"; };
 		0BF253F81B7F56BD0003A3BB /* GeometryConversions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeometryConversions.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +129,9 @@
 				0B87BBF31BC17E5E00858AD7 /* SliderTableViewCell.m */,
 				0B87BBF41BC17E5E00858AD7 /* SliderTableViewCell.xib */,
 				0B8625651B77F1C60070F73A /* Supporting Files */,
+				0B87BBFC1BC189EE00858AD7 /* SwitchTableViewCell.h */,
+				0B87BBFD1BC189EE00858AD7 /* SwitchTableViewCell.m */,
+				0B87BBFE1BC189EE00858AD7 /* SwitchTableViewCell.xib */,
 			);
 			path = Greebler;
 			sourceTree = "<group>";
@@ -237,6 +245,7 @@
 				0B8625741B77F1C60070F73A /* Main.storyboard in Resources */,
 				0B8625791B77F1C60070F73A /* LaunchScreen.xib in Resources */,
 				0B87BBF61BC17E5E00858AD7 /* SliderTableViewCell.xib in Resources */,
+				0B87BC001BC189EE00858AD7 /* SwitchTableViewCell.xib in Resources */,
 				0B8625761B77F1C60070F73A /* Images.xcassets in Resources */,
 				0B87BBFB1BC1820300858AD7 /* SettingsTableViewController.xib in Resources */,
 			);
@@ -262,6 +271,7 @@
 				0B659BEA1B78025800127E6A /* DrawingView.mm in Sources */,
 				0B8625711B77F1C60070F73A /* DrawingViewController.mm in Sources */,
 				0B87BBF51BC17E5E00858AD7 /* SliderTableViewCell.m in Sources */,
+				0B87BBFF1BC189EE00858AD7 /* SwitchTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

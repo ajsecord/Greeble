@@ -7,6 +7,8 @@
 //
 
 #import "SettingsTableViewController.h"
+#import "SliderTableViewCell.h"
+#import "SwitchTableViewCell.h"
 
 @interface SettingsTableViewController ()
 @end
@@ -15,6 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    UINib *nib = [UINib nibWithNibName:@"SliderTableViewCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:NSStringFromClass([SliderSetting class])];
+
+    nib = [UINib nibWithNibName:@"SwitchTableViewCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:NSStringFromClass([SwitchSetting class])];
 }
 
 #pragma mark - Table view data source
@@ -30,9 +38,28 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSAssert(indexPath.row < [self.settings count], @"");
 
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Test"];
-    cell.textLabel.text = [NSString stringWithFormat:@"%@",[self.settings[indexPath.row] title]];
-    return cell;
+    id setting = self.settings[indexPath.row];
+    if ([setting isKindOfClass:[SliderSetting class]]) {
+        SliderSetting *sliderSetting = setting;
+        SliderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SliderSetting class])
+                                                                    forIndexPath:indexPath];
+        cell.titleLabel.text = sliderSetting.title;
+        cell.minValue = sliderSetting.minValue;
+        cell.maxValue = sliderSetting.maxValue;
+        cell.value = sliderSetting.value;
+        return cell;
+
+    } else if ([setting isKindOfClass:[SwitchSetting class]]) {
+        SwitchSetting *switchSetting = setting;
+        SwitchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([SwitchSetting class])
+                                                                    forIndexPath:indexPath];
+        cell.titleLabel.text = switchSetting.title;
+        cell.valueSwitch.on = switchSetting.value;
+        return cell;
+    }
+
+    NSAssert(NO, @"Unknown setting: %@", setting);
+    return nil;
 }
 
 @end
