@@ -20,7 +20,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="bRp-k1-QqF"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="bRp-k1-QqF">
+                            <connections>
+                                <action selector="settingsButtonWasTapped:" destination="JEX-9P-axG" id="MuK-ZF-xzy"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>

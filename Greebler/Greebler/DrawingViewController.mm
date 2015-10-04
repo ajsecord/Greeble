@@ -55,9 +55,9 @@ static inline Greeble::Rect randRect(CGRect bounds, CGSize maxSize) {
         return;
 
     if (numRects > _rects.size()) {
-        int curSize = _rects.size();
+        size_t curSize = _rects.size();
         _rects.resize(numRects);
-        for (int i = curSize; i < numRects; ++i) {
+        for (size_t i = curSize; i < numRects; ++i) {
             _rects[i] = randRect(self.view.bounds, kMaxSize);
         }
     } else if (numRects < _rects.size()) {
@@ -77,6 +77,10 @@ static inline Greeble::Rect randRect(CGRect bounds, CGSize maxSize) {
 - (void)viewDidLayoutSubviews {
 }
 
+- (IBAction)settingsButtonWasTapped:(id)sender {
+    NSLog(@"Tapped");
+}
+
 @end
 
 @implementation RangeRectDataSource {
@@ -94,7 +98,7 @@ static inline Greeble::Rect randRect(CGRect bounds, CGSize maxSize) {
 #pragma mark - RectDataSource
 
 - (int)numRectsForDrawingView:(DrawingView *)drawingView {
-    return _rects ? _rects->size() : 0;
+    return _rects ? (int)_rects->size() : 0;
 }
 
 - (Greeble::Rect)rectForDrawingView:(DrawingView *)drawingView atIndex:(int)index {

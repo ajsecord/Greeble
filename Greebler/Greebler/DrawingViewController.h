@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DrawingViewController : UIViewController
-@property(nonatomic, assign) NSInteger numRects;
+- (IBAction)settingsButtonWasTapped:(id)sender;
 @end
 
