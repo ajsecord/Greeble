@@ -75,9 +75,25 @@ static inline Greeble::Rect randRect(CGRect bounds, CGSize maxSize) {
     RangeRectDataSource *dataSource = [[RangeRectDataSource alloc] initWithRects:_rects];
     self.drawingView.dataSource = dataSource;
 
-    _settings = @[[[SliderSetting alloc] initWithTitle:@"Num Rects" minValue:0 maxValue:1000 value:42],
-                  [[SwitchSetting alloc] initWithTitle:@"Grumble" value:YES]
-                  ];
+    NSMutableArray *settings = [NSMutableArray array];
+
+    {
+        SliderSetting *setting = [[SliderSetting alloc] initWithTitle:@"Num Rects" minValue:0 maxValue:1000 value:42];
+        setting.settingValueChanged = ^(id setting) {
+            NSLog(@"Value changed to %f", (float)[((SliderSetting *)setting) value]);
+        };
+        [settings addObject:setting];
+    }
+
+    {
+        SwitchSetting *setting = [[SwitchSetting alloc] initWithTitle:@"Grumble" value:YES];
+        setting.settingValueChanged = ^(id setting) {
+            NSLog(@"Value changed to %i", (int)[((SwitchSetting *)setting) value]);
+        };
+        [settings addObject:setting];
+    }
+
+    _settings = [NSArray arrayWithArray:settings];
 }
 
 - (void)viewDidLayoutSubviews {

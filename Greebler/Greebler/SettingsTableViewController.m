@@ -10,10 +10,42 @@
 #import "SliderTableViewCell.h"
 #import "SwitchTableViewCell.h"
 
-@interface SettingsTableViewController ()
+@interface SliderForwarder : NSObject
+@property(nonatomic, weak) SliderSetting *setting;
+- (void)sliderValueDidChange:(id)sender;
+@end
+
+@interface SwitchForwarder : NSObject
+@property(nonatomic, weak) SwitchSetting *setting;
+- (void)switchValueDidChange:(id)sender;
+@end
+
+@interface SettingsTableViewController () {
+    NSMutableDictionary *_forwarders;
+}
 @end
 
 @implementation SettingsTableViewController
+
+- (id)initWithStyle:(UITableViewStyle)style {
+    self = [super initWithStyle:style];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
+- (void)commonInit {
+    _forwarders = [[NSMutableDictionary alloc] init];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -47,6 +79,16 @@
         cell.minValue = sliderSetting.minValue;
         cell.maxValue = sliderSetting.maxValue;
         cell.value = sliderSetting.value;
+
+        SliderForwarder *forwarder = [[SliderForwarder alloc] init];
+        forwarder.setting = setting;
+        [_forwarders removeObjectForKey:indexPath];
+        [_forwarders setObject:forwarder forKey:indexPath];
+
+        [cell.valueSlider removeTarget:self action:NULL forControlEvents:UIControlEventValueChanged];
+        [cell.valueSlider addTarget:forwarder
+                             action:@selector(sliderValueDidChange:)
+                   forControlEvents:UIControlEventValueChanged];
         return cell;
 
     } else if ([setting isKindOfClass:[SwitchSetting class]]) {
@@ -55,6 +97,16 @@
                                                                     forIndexPath:indexPath];
         cell.titleLabel.text = switchSetting.title;
         cell.valueSwitch.on = switchSetting.value;
+
+        SwitchForwarder *forwarder = [[SwitchForwarder alloc] init];
+        forwarder.setting = setting;
+        [_forwarders removeObjectForKey:indexPath];
+        [_forwarders setObject:forwarder forKey:indexPath];
+
+        [cell.valueSwitch removeTarget:self action:NULL forControlEvents:UIControlEventValueChanged];
+        [cell.valueSwitch addTarget:forwarder
+                             action:@selector(switchValueDidChange:)
+                   forControlEvents:UIControlEventValueChanged];
         return cell;
     }
 
@@ -85,5 +137,21 @@
         _value = value;
     }
     return self;
+}
+@end
+
+@implementation SliderForwarder
+- (void)sliderValueDidChange:(id)sender {
+    if (!self.setting.settingValueChanged)
+        return;
+    self.setting.settingValueChanged(self.setting);
+}
+@end
+
+@implementation SwitchForwarder
+- (void)switchValueDidChange:(id)sender {
+    if (!self.setting.settingValueChanged)
+        return;
+    self.setting.settingValueChanged(self.setting);
 }
 @end

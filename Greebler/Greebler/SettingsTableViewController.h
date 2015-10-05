@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^SettingValueChanged)(id setting);
+
 @interface SliderSetting : NSObject
 @property(nonatomic, copy) NSString *title;
 @property(nonatomic, assign) float minValue;
 @property(nonatomic, assign) float maxValue;
 @property(nonatomic, assign) float value;
+@property(nonatomic, copy) SettingValueChanged settingValueChanged;
 
 - (id)initWithTitle:(NSString *)title minValue:(float)minValue maxValue:(float)maxValue value:(float)value;
 @end
@@ -20,6 +23,7 @@
 @interface SwitchSetting : NSObject
 @property(nonatomic, copy) NSString *title;
 @property(nonatomic, assign) BOOL value;
+@property(nonatomic, copy) SettingValueChanged settingValueChanged;
 
 - (id)initWithTitle:(NSString *)title value:(BOOL)value;
 @end
