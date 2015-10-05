@@ -78,9 +78,10 @@ static inline Greeble::Rect randRect(CGRect bounds, CGSize maxSize) {
     NSMutableArray *settings = [NSMutableArray array];
 
     {
-        SliderSetting *setting = [[SliderSetting alloc] initWithTitle:@"Num Rects" minValue:0 maxValue:1000 value:42];
+        SliderSetting *setting = [[SliderSetting alloc] initWithTitle:@"Num Rects" minValue:0 maxValue:1000 value:[self numRects]];
         setting.settingValueChanged = ^(id setting) {
-            NSLog(@"Value changed to %f", (float)[((SliderSetting *)setting) value]);
+            NSAssert([setting isKindOfClass:[SliderSetting class]], @"");
+            [self setNumRects:((SliderSetting *)setting).value];
         };
         [settings addObject:setting];
     }

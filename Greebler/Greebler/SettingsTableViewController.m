@@ -10,6 +10,8 @@
 #import "SliderTableViewCell.h"
 #import "SwitchTableViewCell.h"
 
+static UIView *FindSuperviewOfClass(UIView *view, Class klass);
+
 @interface SliderForwarder : NSObject
 @property(nonatomic, weak) SliderSetting *setting;
 - (void)sliderValueDidChange:(id)sender;
@@ -142,16 +144,33 @@
 
 @implementation SliderForwarder
 - (void)sliderValueDidChange:(id)sender {
-    if (!self.setting.settingValueChanged)
-        return;
-    self.setting.settingValueChanged(self.setting);
+    UISlider *slider = sender;
+    SliderTableViewCell *cell = (SliderTableViewCell *)FindSuperviewOfClass(sender, [SliderTableViewCell class]);
+    if (cell) {
+        cell.valueLabel.text = [NSString stringWithFormat:@"%i", (int)slider.value];
+    }
+
+    self.setting.value = slider.value;
+
+    if (self.setting.settingValueChanged)
+        self.setting.settingValueChanged(self.setting);
 }
 @end
 
 @implementation SwitchForwarder
 - (void)switchValueDidChange:(id)sender {
-    if (!self.setting.settingValueChanged)
-        return;
-    self.setting.settingValueChanged(self.setting);
+    UISwitch *theSwitch = (UISwitch *)sender;
+
+    self.setting.value = theSwitch.isOn;
+
+    if (self.setting.settingValueChanged)
+        self.setting.settingValueChanged(self.setting);
 }
 @end
+
+UIView *FindSuperviewOfClass(UIView *view, Class klass) {
+    UIView *superview = [view superview];
+    while (superview && ![superview isKindOfClass:klass])
+        superview = [superview superview];
+    return superview;
+}
