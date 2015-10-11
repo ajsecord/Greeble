@@ -22,6 +22,9 @@
 
 /* Begin PBXBuildFile section */
 		0B5BCF391B79ABDC006F5703 /* libLinAlg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB63ECB1B79A223006F95A6 /* libLinAlg.a */; };
+		0B5E92EE1BC9C048000AC79C /* Drawing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E92EC1BC9C048000AC79C /* Drawing.cpp */; settings = {ASSET_TAGS = (); }; };
+		0B5E92F11BC9C71B000AC79C /* Constraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E92EF1BC9C71B000AC79C /* Constraint.cpp */; settings = {ASSET_TAGS = (); }; };
+		0B5E92F41BC9D986000AC79C /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E92F21BC9D986000AC79C /* Random.cpp */; settings = {ASSET_TAGS = (); }; };
 		0BB63EE01B79A42D006F95A6 /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0BB63ED11B79A376006F95A6 /* Rect.cpp */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +35,62 @@
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC045055464E500DB518D;
 			remoteInfo = LinAlg;
+		};
+		0B5E92D81BC9BFA3000AC79C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B5E92CE1BC9BFA3000AC79C /* Chipmunk7.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D3E5F0490AA32FDE004E361B;
+			remoteInfo = ChipmunkDemo;
+		};
+		0B5E92DA1BC9BFA3000AC79C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B5E92CE1BC9BFA3000AC79C /* Chipmunk7.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D34963BB0B56CAA300CAD239;
+			remoteInfo = "Chipmunk-Mac";
+		};
+		0B5E92DC1BC9BFA3000AC79C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B5E92CE1BC9BFA3000AC79C /* Chipmunk7.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D3C3787A11063B1B003EF1D9;
+			remoteInfo = "Chipmunk-iOS";
+		};
+		0B5E92DE1BC9BFA3000AC79C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B5E92CE1BC9BFA3000AC79C /* Chipmunk7.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D39ECD8617ED70D900319DBA;
+			remoteInfo = "Benchmark iPhone";
+		};
+		0B5E92E01BC9BFA3000AC79C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B5E92CE1BC9BFA3000AC79C /* Chipmunk7.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D333C5F018639A0500BBC4FF;
+			remoteInfo = "ObjectiveChipmunk-Mac";
+		};
+		0B5E92E21BC9BFA3000AC79C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B5E92CE1BC9BFA3000AC79C /* Chipmunk7.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D309B21317EFE2EF00AA52C8;
+			remoteInfo = "ObjectiveChipmunk-iOS";
+		};
+		0B5E92E41BC9BFA3000AC79C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B5E92CE1BC9BFA3000AC79C /* Chipmunk7.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D309B22017EFE2EF00AA52C8;
+			remoteInfo = ObjectiveChipmunkTests;
+		};
+		0B5E92EA1BC9BFBD000AC79C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0B5E92CE1BC9BFA3000AC79C /* Chipmunk7.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D3C3787911063B1B003EF1D9;
+			remoteInfo = "Chipmunk-iOS";
 		};
 		0BB63EC81B79A223006F95A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -78,6 +137,13 @@
 /* Begin PBXFileReference section */
 		0B20C9CF1B799E23003ABFEF /* LinAlg.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LinAlg.xcodeproj; path = LinAlg/ide/XCode6/LinAlg.xcodeproj; sourceTree = "<group>"; };
 		0B5BCF3B1B7CA13A006F5703 /* Types.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Types.h; sourceTree = "<group>"; };
+		0B5E92CE1BC9BFA3000AC79C /* Chipmunk7.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Chipmunk7.xcodeproj; path = Chipmunk2D/xcode/Chipmunk7.xcodeproj; sourceTree = "<group>"; };
+		0B5E92EC1BC9C048000AC79C /* Drawing.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Drawing.cpp; path = ../Greeble/Drawing.cpp; sourceTree = "<group>"; };
+		0B5E92ED1BC9C048000AC79C /* Drawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Drawing.h; sourceTree = "<group>"; };
+		0B5E92EF1BC9C71B000AC79C /* Constraint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Constraint.cpp; path = ../Greeble/Constraint.cpp; sourceTree = "<group>"; };
+		0B5E92F01BC9C71B000AC79C /* Constraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constraint.h; sourceTree = "<group>"; };
+		0B5E92F21BC9D986000AC79C /* Random.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Random.cpp; path = ../Greeble/Random.cpp; sourceTree = "<group>"; };
+		0B5E92F31BC9D986000AC79C /* Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Random.h; sourceTree = "<group>"; };
 		0BB63ED01B79A24C006F95A6 /* Rect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
 		0BB63ED11B79A376006F95A6 /* Rect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Rect.cpp; sourceTree = "<group>"; };
 		0BB63ED61B79A427006F95A6 /* libGreeble.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGreeble.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +164,7 @@
 		0B20C9CE1B799E0B003ABFEF /* External */ = {
 			isa = PBXGroup;
 			children = (
+				0B5E92CE1BC9BFA3000AC79C /* Chipmunk7.xcodeproj */,
 				0B20C9CF1B799E23003ABFEF /* LinAlg.xcodeproj */,
 			);
 			name = External;
@@ -107,11 +174,28 @@
 		0B20C9DF1B799E5B003ABFEF /* Public Headers */ = {
 			isa = PBXGroup;
 			children = (
+				0B5E92F01BC9C71B000AC79C /* Constraint.h */,
+				0B5E92ED1BC9C048000AC79C /* Drawing.h */,
+				0B5E92F31BC9D986000AC79C /* Random.h */,
 				0BB63ED01B79A24C006F95A6 /* Rect.h */,
 				0B5BCF3B1B7CA13A006F5703 /* Types.h */,
 			);
 			name = "Public Headers";
 			path = Greeble;
+			sourceTree = "<group>";
+		};
+		0B5E92CF1BC9BFA3000AC79C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0B5E92D91BC9BFA3000AC79C /* ChipmunkDemo.app */,
+				0B5E92DB1BC9BFA3000AC79C /* libChipmunk-Mac.a */,
+				0B5E92DD1BC9BFA3000AC79C /* libChipmunk-iOS.a */,
+				0B5E92DF1BC9BFA3000AC79C /* Benchmark iPhone.app */,
+				0B5E92E11BC9BFA3000AC79C /* libObjectiveChipmunk-Mac.a */,
+				0B5E92E31BC9BFA3000AC79C /* libObjectiveChipmunk-iOS.a */,
+				0B5E92E51BC9BFA3000AC79C /* ObjectiveChipmunkTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		0B8625521B77F19C0070F73A = {
@@ -127,6 +211,9 @@
 		0BB63EC01B79A1EE006F95A6 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				0B5E92EF1BC9C71B000AC79C /* Constraint.cpp */,
+				0B5E92EC1BC9C048000AC79C /* Drawing.cpp */,
+				0B5E92F21BC9D986000AC79C /* Random.cpp */,
 				0BB63ED11B79A376006F95A6 /* Rect.cpp */,
 			);
 			name = Source;
@@ -166,6 +253,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				0B5E92EB1BC9BFBD000AC79C /* PBXTargetDependency */,
 				0B5BCF371B79AB17006F5703 /* PBXTargetDependency */,
 			);
 			name = Greeble;
@@ -201,6 +289,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 0B5E92CF1BC9BFA3000AC79C /* Products */;
+					ProjectRef = 0B5E92CE1BC9BFA3000AC79C /* Chipmunk7.xcodeproj */;
+				},
+				{
 					ProductGroup = 0BB63EC11B79A223006F95A6 /* Products */;
 					ProjectRef = 0B20C9CF1B799E23003ABFEF /* LinAlg.xcodeproj */;
 				},
@@ -214,6 +306,55 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		0B5E92D91BC9BFA3000AC79C /* ChipmunkDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = ChipmunkDemo.app;
+			remoteRef = 0B5E92D81BC9BFA3000AC79C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0B5E92DB1BC9BFA3000AC79C /* libChipmunk-Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libChipmunk-Mac.a";
+			remoteRef = 0B5E92DA1BC9BFA3000AC79C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0B5E92DD1BC9BFA3000AC79C /* libChipmunk-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libChipmunk-iOS.a";
+			remoteRef = 0B5E92DC1BC9BFA3000AC79C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0B5E92DF1BC9BFA3000AC79C /* Benchmark iPhone.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Benchmark iPhone.app";
+			remoteRef = 0B5E92DE1BC9BFA3000AC79C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0B5E92E11BC9BFA3000AC79C /* libObjectiveChipmunk-Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libObjectiveChipmunk-Mac.a";
+			remoteRef = 0B5E92E01BC9BFA3000AC79C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0B5E92E31BC9BFA3000AC79C /* libObjectiveChipmunk-iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libObjectiveChipmunk-iOS.a";
+			remoteRef = 0B5E92E21BC9BFA3000AC79C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0B5E92E51BC9BFA3000AC79C /* ObjectiveChipmunkTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ObjectiveChipmunkTests.xctest;
+			remoteRef = 0B5E92E41BC9BFA3000AC79C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		0BB63EC91B79A223006F95A6 /* generate_headers */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
@@ -265,6 +406,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B5E92F41BC9D986000AC79C /* Random.cpp in Sources */,
+				0B5E92EE1BC9C048000AC79C /* Drawing.cpp in Sources */,
+				0B5E92F11BC9C71B000AC79C /* Constraint.cpp in Sources */,
 				0BB63EE01B79A42D006F95A6 /* Rect.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,6 +420,11 @@
 			isa = PBXTargetDependency;
 			name = LinAlg;
 			targetProxy = 0B5BCF361B79AB17006F5703 /* PBXContainerItemProxy */;
+		};
+		0B5E92EB1BC9BFBD000AC79C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Chipmunk-iOS";
+			targetProxy = 0B5E92EA1BC9BFBD000AC79C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

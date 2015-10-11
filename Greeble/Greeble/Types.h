@@ -10,9 +10,11 @@
 #define Greeble_Types_h
 
 #include <LinAlg/Vec2.h>
+#include <LinAlg/Transform2.h>
 
 namespace Greeble {
     typedef LinAlg::Vec2f Vec;
+    typedef LinAlg::Transform2f Transform;
     typedef Vec::value_type Scalar;
 }
 
