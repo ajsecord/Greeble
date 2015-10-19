@@ -12,6 +12,8 @@ namespace Greeble {
         virtual bool satisfies(const AlignedRect& rect) const = 0;
         virtual bool satisfies(const Vec& point) const = 0;
         virtual bool satisfies(const Rect& rect) const = 0;
+
+        virtual ~Constraint() {}
     };
 
     class AlignedRectAreaConstraint : public Constraint {
