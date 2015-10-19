@@ -1,11 +1,11 @@
-#ifndef SimulatedAnnealing_h
-#define SimulatedAnnealing_h
+#ifndef Annealing_h
+#define Annealing_h
 
 #include <Greeble/Random.h>
 #include <Greeble/Types.h>
 
 namespace Greeble {
-    namespace SimulatedAnnealing {
+    namespace Annealing {
         // A do-nothing reporter object if you don't care about the output.
         template <typename State>
         struct NullReporter {
@@ -44,8 +44,7 @@ namespace Greeble {
 
             return std::make_tuple(state, temp);
         }
-
     }
 }
 
-#endif /* SimulatedAnnealing_h */
+#endif /* Annealing_h */

@@ -162,7 +162,7 @@
 		0B5E92F01BC9C71B000AC79C /* Constraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constraint.h; sourceTree = "<group>"; };
 		0B5E92F21BC9D986000AC79C /* Random.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Random.cpp; path = ../Greeble/Random.cpp; sourceTree = "<group>"; };
 		0B5E92F31BC9D986000AC79C /* Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Random.h; sourceTree = "<group>"; };
-		0B5E92F61BCB1468000AC79C /* SimulatedAnnealing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulatedAnnealing.h; sourceTree = "<group>"; };
+		0B5E92F61BCB1468000AC79C /* Annealing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annealing.h; sourceTree = "<group>"; };
 		0B5E92FC1BCB247C000AC79C /* SimulatedAnnealingTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SimulatedAnnealingTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B5E92FE1BCB247C000AC79C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0BB63ED01B79A24C006F95A6 /* Rect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
@@ -203,11 +203,11 @@
 		0B20C9DF1B799E5B003ABFEF /* Public Headers */ = {
 			isa = PBXGroup;
 			children = (
+				0B5E92F61BCB1468000AC79C /* Annealing.h */,
 				0B5E92F01BC9C71B000AC79C /* Constraint.h */,
 				0B5E92ED1BC9C048000AC79C /* Drawing.h */,
 				0B5E92F31BC9D986000AC79C /* Random.h */,
 				0BB63ED01B79A24C006F95A6 /* Rect.h */,
-				0B5E92F61BCB1468000AC79C /* SimulatedAnnealing.h */,
 				0B5BCF3B1B7CA13A006F5703 /* Types.h */,
 			);
 			name = "Public Headers";

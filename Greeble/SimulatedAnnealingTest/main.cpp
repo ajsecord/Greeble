@@ -1,7 +1,7 @@
 #include <algorithm>
 #include <iostream>
 
-#include <Greeble/SimulatedAnnealing.h>
+#include <Greeble/Annealing.h>
 #include <Greeble/Types.h>
 
 using namespace Greeble;
@@ -38,7 +38,7 @@ int main(int argc, const char * argv[]) {
     SampleProblem problem;
     SampleProblem::State state = { 100 };
     SampleReporter reporter;
-    std::tuple<SampleProblem::State, Scalar> result = SimulatedAnnealing::optimize(problem, state, 1000, 1e-3, reporter, 10000);
+    std::tuple<SampleProblem::State, Scalar> result = Annealing::optimize(problem, state, 1000, 1e-3, reporter, 10000);
     std::cout << "Final: " << std::get<0>(result).energy << ' ' << std::get<1>(result) << std::endl;
     return 0;
 }
