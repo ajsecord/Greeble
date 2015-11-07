@@ -21,12 +21,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0B0A623B1BD51DB100B65C08 /* libGreeble.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB63ED61B79A427006F95A6 /* libGreeble.a */; };
 		0B5BCF391B79ABDC006F5703 /* libLinAlg.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB63ECB1B79A223006F95A6 /* libLinAlg.a */; };
-		0B5E92EE1BC9C048000AC79C /* Drawing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E92EC1BC9C048000AC79C /* Drawing.cpp */; settings = {ASSET_TAGS = (); }; };
-		0B5E92F11BC9C71B000AC79C /* Constraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E92EF1BC9C71B000AC79C /* Constraint.cpp */; settings = {ASSET_TAGS = (); }; };
-		0B5E92F41BC9D986000AC79C /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E92F21BC9D986000AC79C /* Random.cpp */; settings = {ASSET_TAGS = (); }; };
-		0B5E92FF1BCB247C000AC79C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E92FE1BCB247C000AC79C /* main.cpp */; };
+		0B5E92EE1BC9C048000AC79C /* Drawing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E92EC1BC9C048000AC79C /* Drawing.cpp */; };
+		0B5E92F11BC9C71B000AC79C /* Constraint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E92EF1BC9C71B000AC79C /* Constraint.cpp */; };
+		0B5E92F41BC9D986000AC79C /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B5E92F21BC9D986000AC79C /* Random.cpp */; };
 		0BB63EE01B79A42D006F95A6 /* Rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0BB63ED11B79A376006F95A6 /* Rect.cpp */; };
 /* End PBXBuildFile section */
 
@@ -94,13 +92,6 @@
 			remoteGlobalIDString = D3C3787911063B1B003EF1D9;
 			remoteInfo = "Chipmunk-iOS";
 		};
-		0B5E93031BCB2483000AC79C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0B8625531B77F19C0070F73A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0BB63ED51B79A427006F95A6;
-			remoteInfo = Greeble;
-		};
 		0BB63EC81B79A223006F95A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0B20C9CF1B799E23003ABFEF /* LinAlg.xcodeproj */;
@@ -132,15 +123,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0B5E92FA1BCB247C000AC79C /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 		0BB63ED41B79A427006F95A6 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,7 +145,6 @@
 		0B5E92F21BC9D986000AC79C /* Random.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Random.cpp; path = ../Greeble/Random.cpp; sourceTree = "<group>"; };
 		0B5E92F31BC9D986000AC79C /* Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Random.h; sourceTree = "<group>"; };
 		0B5E92F61BCB1468000AC79C /* Annealing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annealing.h; sourceTree = "<group>"; };
-		0B5E92FC1BCB247C000AC79C /* SimulatedAnnealingTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SimulatedAnnealingTest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B5E92FE1BCB247C000AC79C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0BB63ED01B79A24C006F95A6 /* Rect.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rect.h; sourceTree = "<group>"; };
 		0BB63ED11B79A376006F95A6 /* Rect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Rect.cpp; sourceTree = "<group>"; };
@@ -171,14 +152,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0B5E92F91BCB247C000AC79C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0B0A623B1BD51DB100B65C08 /* libGreeble.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0BB63ED31B79A427006F95A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,7 +247,6 @@
 			isa = PBXGroup;
 			children = (
 				0BB63ED61B79A427006F95A6 /* libGreeble.a */,
-				0B5E92FC1BCB247C000AC79C /* SimulatedAnnealingTest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -282,24 +254,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0B5E92FB1BCB247C000AC79C /* SimulatedAnnealingTest */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0B5E93001BCB247C000AC79C /* Build configuration list for PBXNativeTarget "SimulatedAnnealingTest" */;
-			buildPhases = (
-				0B5E92F81BCB247C000AC79C /* Sources */,
-				0B5E92F91BCB247C000AC79C /* Frameworks */,
-				0B5E92FA1BCB247C000AC79C /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0B5E93041BCB2483000AC79C /* PBXTargetDependency */,
-			);
-			name = SimulatedAnnealingTest;
-			productName = SimulatedAnnealingTest;
-			productReference = 0B5E92FC1BCB247C000AC79C /* SimulatedAnnealingTest */;
-			productType = "com.apple.product-type.tool";
-		};
 		0BB63ED51B79A427006F95A6 /* Greeble */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0BB63EDD1B79A427006F95A6 /* Build configuration list for PBXNativeTarget "Greeble" */;
@@ -330,9 +284,6 @@
 					0B5BCF301B79A729006F5703 = {
 						CreatedOnToolsVersion = 6.4;
 					};
-					0B5E92FB1BCB247C000AC79C = {
-						CreatedOnToolsVersion = 7.0.1;
-					};
 					0BB63ED51B79A427006F95A6 = {
 						CreatedOnToolsVersion = 7.0;
 					};
@@ -362,7 +313,6 @@
 			targets = (
 				0BB63ED51B79A427006F95A6 /* Greeble */,
 				0B5BCF301B79A729006F5703 /* Show Build Settings */,
-				0B5E92FB1BCB247C000AC79C /* SimulatedAnnealingTest */,
 			);
 		};
 /* End PBXProject section */
@@ -464,14 +414,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0B5E92F81BCB247C000AC79C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0B5E92FF1BCB247C000AC79C /* main.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0BB63ED21B79A427006F95A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -496,11 +438,6 @@
 			name = "Chipmunk-iOS";
 			targetProxy = 0B5E92EA1BC9BFBD000AC79C /* PBXContainerItemProxy */;
 		};
-		0B5E93041BCB2483000AC79C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0BB63ED51B79A427006F95A6 /* Greeble */;
-			targetProxy = 0B5E93031BCB2483000AC79C /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -515,85 +452,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		0B5E93011BCB247C000AC79C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		0B5E93021BCB247C000AC79C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -662,7 +520,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -705,7 +563,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -719,15 +577,6 @@
 			buildConfigurations = (
 				0B5BCF321B79A729006F5703 /* Debug */,
 				0B5BCF331B79A729006F5703 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0B5E93001BCB247C000AC79C /* Build configuration list for PBXNativeTarget "SimulatedAnnealingTest" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0B5E93011BCB247C000AC79C /* Debug */,
-				0B5E93021BCB247C000AC79C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

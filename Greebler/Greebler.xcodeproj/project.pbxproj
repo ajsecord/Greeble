@@ -16,12 +16,12 @@
 		0B8625761B77F1C60070F73A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B8625751B77F1C60070F73A /* Images.xcassets */; };
 		0B8625791B77F1C60070F73A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B8625771B77F1C60070F73A /* LaunchScreen.xib */; };
 		0B8625851B77F1C70070F73A /* GreeblerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B8625841B77F1C70070F73A /* GreeblerTests.m */; };
-		0B87BBF51BC17E5E00858AD7 /* SliderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87BBF31BC17E5E00858AD7 /* SliderTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		0B87BBF61BC17E5E00858AD7 /* SliderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B87BBF41BC17E5E00858AD7 /* SliderTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		0B87BBFA1BC1820300858AD7 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87BBF81BC1820300858AD7 /* SettingsTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		0B87BBFB1BC1820300858AD7 /* SettingsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B87BBF91BC1820300858AD7 /* SettingsTableViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		0B87BBFF1BC189EE00858AD7 /* SwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87BBFD1BC189EE00858AD7 /* SwitchTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		0B87BC001BC189EE00858AD7 /* SwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B87BBFE1BC189EE00858AD7 /* SwitchTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		0B87BBF51BC17E5E00858AD7 /* SliderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87BBF31BC17E5E00858AD7 /* SliderTableViewCell.m */; };
+		0B87BBF61BC17E5E00858AD7 /* SliderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B87BBF41BC17E5E00858AD7 /* SliderTableViewCell.xib */; };
+		0B87BBFA1BC1820300858AD7 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87BBF81BC1820300858AD7 /* SettingsTableViewController.m */; };
+		0B87BBFB1BC1820300858AD7 /* SettingsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B87BBF91BC1820300858AD7 /* SettingsTableViewController.xib */; };
+		0B87BBFF1BC189EE00858AD7 /* SwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B87BBFD1BC189EE00858AD7 /* SwitchTableViewCell.m */; };
+		0B87BC001BC189EE00858AD7 /* SwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B87BBFE1BC189EE00858AD7 /* SwitchTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -367,7 +367,7 @@
 					"$(SRCROOT)/../Greeble",
 					"$(SRCROOT)/../Greeble/ext/LinAlg/include",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -414,7 +414,7 @@
 					"$(SRCROOT)/../Greeble",
 					"$(SRCROOT)/../Greeble/ext/LinAlg/include",
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
